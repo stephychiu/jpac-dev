@@ -318,3 +318,20 @@ iframe{
     height: 600px;
     background: #aaa;
   }
+
+.iframe-container {
+  position: relative;
+  width: 100%;
+  height: 0; /* Important: set height to 0 for padding-top to define height */
+  overflow: hidden; /* Hides content that might overflow the calculated height */
+  padding-top: 56.25%; /* For a 16:9 aspect ratio (9/16 * 100) */
+  /* For 4:3, use padding-top: 75%; (3/4 * 100) */
+}
+
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
