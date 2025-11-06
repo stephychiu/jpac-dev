@@ -153,7 +153,7 @@ body {
 
     iframe{
         display: block;  /* iframes are inline by default */
-        height: 180vh;  /* Set height to 100% of the viewport height */
+        height: 200vh;  /* Set height to 100% of the viewport height */
         width: 100vw;  /* Set width to 100% of the viewport width */
         border: none; /* Remove default border */
         /*background: white; */ /* Just for styling */
