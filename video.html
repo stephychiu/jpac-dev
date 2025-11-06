@@ -1,0 +1,123 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>歡欣頌基督教會</title> 
+        <link rel="stylesheet" href="css/style.css">  
+        <link rel="stylesheet" href="css/style02.css">         
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>                    
+    </head>           
+    <body>
+       <image src="images/JPA-web.jpg" width="100%"></image>  <!-- JPA Logo banner -->
+        <!-- Menu START -->
+        <nav class="navbar navbar-inverse">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html"><img src="images/home.png" style="width:20px;margin-right: 5px;"></a>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <!--<li class="active"><a href="main.html"><img src="images/home.png" style="width:20px;margin-right: 5px;"></a></li>-->
+                        <li class="active">
+                            <li class="dropdown active">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">認識歡恩頌<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="history01.html">教會簡介</a></li>
+                                <li><a href="history03.html">教會特色</a></li>
+                                <li><a href="history04.html">禱告服事</a></li>
+                                <li><a href="history05.html">同工團隊</a></li>
+                            </ul>
+                            </li>
+                        </li>
+                        <li><a href="http://www.jpa.org.hk/JPSS%20Web.html" target="_blank">社會服務</a></li>
+                        <li><a href="https://www.chinesebible.org.hk/onlinebible/index.php" target="_blank">線上聖經</a></li>
+                        <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">重溫影片 ▶️<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="https://www.youtube.com/@jpa31881965" target="_blank">證道重溫 ▶️</a></li>
+                            <li><a href="https://www.youtube.com/@jpa2052" target="_blank">商福午間重溫 ▶️</a></li>
+                        </ul>
+                        </li>
+                        <li><a href="give.html">奉獻</a></li>
+                        <li><a href="weather.html">颱風或暴雨安排<img src="images/weather.jpg" style="width:12px;margin-left: 5px;"></a></li> 
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="https://www.facebook.com/praiseassembly.joyful" target="_blank"><img src="images/facebook1.png" style="width: 20px;;margin-right: 5px;">Facebook</a></li>
+                        <li><a href="https://www.instagram.com/joyfulpraiseassembly/#" target="_blank"><img src="images/ig2.png" style="width: 20px;margin-right: 5px;">Instagram</a></li>
+                    </ul>
+                </div>
+            <!--</div>-->
+        </nav>
+        <!-- Menu END -->
+
+        <div class="container-fluid">
+            <div class="header"><label style="font-size: 20px;font-weight: bold;color:rgb(96, 96, 3)">難忘撮要</label></div>
+        </div>
+        <br>
+        <div class="container-fluid">
+            <h1 style="color:white;text-align: center; ;">How to make a video gallery</h1>
+            <div class="row-video">
+                <div class="col-video">
+                    <div class="feature-img">
+                        <img src="images/facebook480.png" width="100%">
+                        <img src="images/play.png" class="play-btn" onclick="playVideo('media/vid1.mp4')">
+                    </div>
+                </div>
+                <div class="col-video">
+                    <div class="small-img-row">
+                        <div class="small-img">
+                            <img src="images/man01.png">
+                            <img src="images/play.png" class="play-btn" onclick="playVideo('media/vid2.mp4')">
+                        </div>
+                        <p>How to add multiple videos in a website or <br> to make a video gallery</p>
+                    </div>
+
+                    <div class="small-img-row">
+                        <div class="small-img">
+                            <img src="images/woman.png">
+                            <img src="images/play.png" class="play-btn" onclick="playVideo('media/vid3.mp4')">
+                        </div>
+                        <p>How to add multiple videos in a website or <br> to make a video gallery</p>
+                    </div>
+                    
+                    <div class="small-img-row">
+                        <div class="small-img">
+                            <img src="images/man02.png">
+                            <img src="images/play.png" class="play-btn" onclick="playVideo('media/vid4.mp4')">
+                        </div>
+                        <p>How to add multiple videos in a website or <br> to make a video gallery</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="video-player" id="videoPlayer">
+            <video width="100%" controls autoplay id="myVideo">
+                <source src="media/vid1.mp4" type="video/mp4">
+            </video>
+            <img src="images/close.png" class="close-btn" onclick="stopVideo()">
+        </div>
+
+
+        <script>
+            var videoPlayer = document.getElementById("videoPlayer");
+            var myVideo = document.getElementById("myVideo");
+
+            function stopVideo() {
+                videoPlayer.style.display = "none";
+            }
+
+            function playVideo(file) {
+                myVideo.src = file;
+                videoPlayer.style.display="block";
+            }
+        </script>
+    </body>        
+</html>
